@@ -53,19 +53,33 @@ export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc)
   "logo": logo.asset->url,
 }`;
 
-export const singleProjectQuery = groq`*[_type == "project" && slug.current == $slug][0]{
-  _id,
-  name,
-  projectUrl,
-  repository,
-  coverImage {
-    "image": asset->url,
-    "lqip": asset->metadata.lqip,
-    alt,
-  },
-  tagline,
-  description
-}`;
+export const singleProjectQuery = groq`
+  *[_type == "project" && slug.current == $slug][0]{
+    _id,
+    name,
+    slug,
+    projectUrl,
+    repository,
+    tagline,
+    description,
+    logo {
+      asset->{
+        _id,
+        url
+      }
+    },
+    coverImage {
+      alt,
+      image {
+        asset->{
+          _id,
+          url
+        }
+      }
+    }
+  }
+`;
+
 
 export const postsQuery = groq`*[_type == "Post"] | order(_createdAt desc){
   ${postField},

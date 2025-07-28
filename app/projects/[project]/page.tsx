@@ -15,10 +15,7 @@ type Props = {
   };
 };
 
-const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png";
-
-// Dynamic metadata for SEO
+// ✅ Dynamic SEO metadata (no fallback image or URL used)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.project;
   const project: ProjectType = await sanityFetch({
@@ -27,17 +24,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     qParams: { slug },
   });
 
+  const hasValidImage = project.coverImage?.image;
+
   return {
     title: `${project.name} | Project`,
-    metadataBase: new URL(`https://victoreke.com/projects/${project.slug}`),
     description: project.tagline,
     openGraph: {
-      images: project.coverImage
-        ? urlFor(project.coverImage.image).width(1200).height(630).url()
-        : fallbackImage,
-      url: `https://victoreke.com/projects/${project.slug}`,
       title: project.name,
       description: project.tagline,
+      images: hasValidImage
+        ? [urlFor(hasValidImage).width(1200).height(630).url()]
+        : [],
     },
   };
 }
@@ -61,7 +58,7 @@ export default async function Project({ params }: Props) {
 
             <div className="flex items-center gap-x-2">
               <a
-                href={project.projectUrl}
+                href={project.projectUrl || "#"}
                 rel="noreferrer noopener"
                 target="_blank"
                 className={`flex items-center gap-x-2 dark:bg-primary-bg bg-secondary-bg dark:text-white text-zinc-700 border border-transparent rounded-md px-4 py-2 duration-200 ${
@@ -75,7 +72,7 @@ export default async function Project({ params }: Props) {
               </a>
 
               <a
-                href={project.repository}
+                href={project.repository || "#"}
                 rel="noreferrer noopener"
                 target="_blank"
                 className={`flex items-center gap-x-2 dark:bg-primary-bg bg-secondary-bg dark:text-white text-zinc-700 border border-transparent rounded-md px-4 py-2 duration-200 ${
@@ -90,17 +87,19 @@ export default async function Project({ params }: Props) {
             </div>
           </div>
 
-          <div className="relative w-full h-40 pt-[52.5%]">
-            <Image
-              className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover"
-              fill
-              src={project.coverImage?.image ?? fallbackImage}
-              alt={project.coverImage?.alt ?? project.name}
-              quality={100}
-              placeholder={project.coverImage?.lqip ? `blur` : "empty"}
-              blurDataURL={project.coverImage?.lqip || ""}
-            />
-          </div>
+          {project.coverImage?.image && (
+            <div className="relative w-full h-40 pt-[52.5%]">
+              <Image
+                className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover"
+                fill
+                src={urlFor(project.coverImage.image).url()}
+                alt={project.coverImage?.alt ?? project.name}
+                quality={100}
+                placeholder={project.coverImage?.lqip ? "blur" : "empty"}
+                blurDataURL={project.coverImage?.lqip || ""}
+              />
+            </div>
+          )}
 
           <div className="mt-8 dark:text-zinc-400 text-zinc-600 leading-relaxed">
             <PortableText
