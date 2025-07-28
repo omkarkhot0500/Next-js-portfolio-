@@ -97,3 +97,8 @@ export type HeroeType = {
   url: string;
   met: boolean;
 };
+
+export type faviconType = {
+  domain: string;
+  alt?: string; 
+};
