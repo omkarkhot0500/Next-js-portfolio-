@@ -2,6 +2,7 @@ import { hookSecret } from "@/lib/env.api";
 import { revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 import { parseBody } from "next-sanity/webhook";
+export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
   try {
@@ -19,14 +20,21 @@ export async function POST(req: NextRequest) {
     }
 
     revalidateTag(body._type);
-    return NextResponse.json({
-      status: 200,
-      revalidated: true,
-      now: Date.now(),
-      body,
-    });
+
+    return NextResponse.json(
+      {
+        status: 200,
+        revalidated: true,
+        now: Date.now(),
+        body,
+      },
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   } catch (error: any) {
-    console.error(error);
-    return new Response(error.message, { status: 500 });
+    console.error("Revalidation error:", error);
+    return new Response(error.message || "Internal Server Error", { status: 500 });
   }
 }
