@@ -28,7 +28,8 @@ export default function Navbar() {
           <Link href="/">
             <Image src={Logo} width={35} height={35} alt="logo" />
           </Link>
-
+     
+     
           <nav className="md:block hidden">
             <ul className="flex items-center gap-x-8">
               {data.map((link, id) => (
