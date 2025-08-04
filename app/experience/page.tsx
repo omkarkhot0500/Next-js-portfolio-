@@ -155,8 +155,17 @@ const ExperiencePage = () => {
             </svg>
           </span>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            Lead Developer · Official Club Website
+            Lead Developer ·{" "}
+            <a
+              href="https://cseaimlclubgat.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline dark:text-blue-400"
+            >
+              Official Club Website
+            </a>
           </h3>
+
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
             Date not specified
           </time>

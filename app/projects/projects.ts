@@ -25,8 +25,8 @@ export const projects = [
   ],
   feedback: false,
   links: {
-    live: "",
-    github: ""
+    live: "https://prompt-verse-3-0.vercel.app/",
+    github: "https://github.com/omkarkhot0500/PromptVerse"
   }
 },
 {
@@ -55,8 +55,8 @@ export const projects = [
   ],
   feedback: false,
   links: {
-    live: "",
-    github: ""
+    live: "https://codebunk-2-0-u43f.onrender.com/",
+    github: "https://github.com/omkarkhot0500/CodeBunk"
   }
 },
 {
@@ -83,8 +83,8 @@ export const projects = [
   ],
   feedback: false,
   links: {
-    live: "",
-    github: ""
+    live: "https://gat-cse-aiml-lms.netlify.app/",
+    github: "https://github.com/omkarkhot0500/Employee-leave-management-system-/"
   }
 },
 {
@@ -111,8 +111,8 @@ export const projects = [
   ],
   feedback: false,
   links: {
-    live: "",
-    github: ""
+    live: "https://cseaimlclubgat.netlify.app/",
+    github: "https://github.com/omkarkhot0500/Project"
   }
 },
 {
@@ -166,7 +166,7 @@ export const projects = [
   ],
   feedback: false,
   links: {
-    live: "",
+    live: "https://code.dailywith.me/",
     github: ""
   }
 }
