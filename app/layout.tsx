@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
   keywords: [
-    "Abhishek Ghimire",
+    "Omkar khot",
     "Portfolio",
     "Projects",
     "Skills",
@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Abhishek Ghimire",
+      name: "Omkar khot",
       url: siteConfig.url,
     },
   ],
-  creator: "Abhishek Ghimire",
+  creator: "Omkar khot",
   openGraph: {
     type: "website",
     locale: "en_US",

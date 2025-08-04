@@ -27,7 +27,7 @@ console.log(getSkills());
 `,
 
   contact: `const contactDetails = {
-    name: "Abhishek Ghimire",
+    name: "Omkar khot",
     email: "aghimire074@gmail.com",
     mobile: "+977-9847526298",
     location: "Kathmandu, Nepal",
