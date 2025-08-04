@@ -159,10 +159,10 @@ const ExperiencePage = () => {
       </ol>
       <CodeSnippet code={code.experience} title="experience.ts" />
       <Pager
-        prevHref="/skills-tools"
-        nextHref="/education"
-        prevTitle="Skills & Tools"
-        nextTitle="Education"
+        prevHref="/"
+        nextHref="/projects"
+        prevTitle="Introduction"
+        nextTitle="Projects"
       />
     </>
   );

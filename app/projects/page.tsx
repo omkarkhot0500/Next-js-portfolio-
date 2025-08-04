@@ -49,9 +49,9 @@ const ProjectsPage = () => {
       <CodeSnippet code={code.projects} title="projects.ts" />
 
       <Pager
-        prevHref="/about"
+        prevHref="/experience"
         nextHref="/skills-tools"
-        prevTitle="About"
+        prevTitle="Experience"
         nextTitle="Skills & Tools"
       />
     </>

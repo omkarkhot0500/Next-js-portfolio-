@@ -18,7 +18,10 @@ const EducationPage = () => {
           I learned a lot, but the real learning happens in the code editor!
         </PageHeaderHeading>
         <PageHeaderDescription>
-          Education has been the solid ground from which I launched my exploration into computer science and AI/ML. Along the way, practical projects and coding sessions have sharpened my technical foundation well beyond the classroom.
+          Education has been the solid ground from which I launched my
+          exploration into computer science and AI/ML. Along the way, practical
+          projects and coding sessions have sharpened my technical foundation
+          well beyond the classroom.
         </PageHeaderDescription>
       </PageHeader>
 
@@ -37,7 +40,8 @@ const EducationPage = () => {
             </svg>
           </span>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            Bachelor of Engineering in Computer Science (AI & ML) · Global Academy of Technology, Bengaluru
+            Bachelor of Engineering in Computer Science (AI & ML) · Global
+            Academy of Technology, Bengaluru
             <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 ms-3">
               Current
             </span>
@@ -46,7 +50,9 @@ const EducationPage = () => {
             Dec 2022 – Present
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Pursuing B.E. in Computer Science with a focus on Artificial Intelligence and Machine Learning. Building a robust foundation in theory and hands-on development, with a current CGPA of 8.56.
+            Pursuing B.E. in Computer Science with a focus on Artificial
+            Intelligence and Machine Learning. Building a robust foundation in
+            theory and hands-on development, with a current CGPA of 8.56.
           </p>
         </li>
 
@@ -70,7 +76,9 @@ const EducationPage = () => {
             2020 – 2022
           </time>
           <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-            Studied Physics, Chemistry, Mathematics, and Computer Science during pre-university, achieving 89.67%. Key exposure to computer fundamentals and analytical thinking.
+            Studied Physics, Chemistry, Mathematics, and Computer Science during
+            pre-university, achieving 89.67%. Key exposure to computer
+            fundamentals and analytical thinking.
           </p>
         </li>
       </ol>
@@ -78,10 +86,10 @@ const EducationPage = () => {
       <CodeSnippet code={code.educationJourney} title="educationJourney.ts" />
 
       <Pager
-        prevHref="/experience"
+        prevHref="/skills-tools"
         nextHref="/contact"
-        prevTitle="Experience"
-        nextTitle="Contact"
+        prevTitle="Skills & Tools"
+        // nextTitle="Contact"
       />
     </>
   );
