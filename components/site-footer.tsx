@@ -36,11 +36,11 @@ export async function SiteFooter() {
               rel="noreferrer"
               className="font-medium transition-colors text-primary hover:text-primary/80"
             >
-              Abhishek Ghimire
+              Omkar khot
             </Link>{" "}
             · Source code available on{" "}
             <Link
-              href={siteConfig.links.github}
+              href="https://github.com/omkarkhot0500/Next-js-portfolio-"
               target="_blank"
               rel="noreferrer"
               className="font-medium transition-colors text-primary hover:text-primary/80"
