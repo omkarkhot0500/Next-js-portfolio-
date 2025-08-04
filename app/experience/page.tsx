@@ -167,7 +167,7 @@ const ExperiencePage = () => {
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Date not specified
+            Ongoing
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
             Developed and deployed the official responsive website for a college
@@ -193,7 +193,7 @@ const ExperiencePage = () => {
             Lead Developer · College Department LMS
           </h3>
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Date not specified
+            Ongoing
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
             Built a custom Learning Management System for internal departmental
