@@ -10,24 +10,30 @@ import { Button } from "@/components/ui/button";
 import { code } from "@/config/codeContent";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
-import { ExternalLink, Mail } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const IntroductionPage = async () => {
   return (
     <>
-      <PageHeader>
-        <PageHeaderHeading>Omkar Khot</PageHeaderHeading>
-        <PageHeaderHeading className="mt-2 text-muted-foreground">
-          Full-stack developer. MERN warrior. Anime lover.
+      <PageHeader className="px-4 sm:px-6 md:px-8">
+        <PageHeaderHeading className="text-2xl sm:text-3xl md:text-4xl font-bold">
+          Omkar Khot
         </PageHeaderHeading>
-        <PageHeaderDescription>
-          I'm a passionate developer focused on building efficient and intuitive web
-          applications using the MERN stack. Currently exploring real-time apps
-          with Socket.IO and building impactful college-level platforms like
-          lost-and-found systems and leave managers. Always leveling up — one
-          line of code at a time.
+
+        <PageHeaderHeading className="mt-2 text-muted-foreground text-lg sm:text-xl md:text-2xl leading-snug sm:leading-normal">
+          🌌 Lost in the Stack, Found in the Flow — Building Scalable, Real-Time
+          Web Solutions
+        </PageHeaderHeading>
+
+        <PageHeaderDescription className="mt-3 max-w-prose text-sm sm:text-base md:text-lg">
+          I’m a passionate full-stack developer crafting efficient, intuitive
+          applications with the MERN stack. Currently exploring real-time
+          experiences with Socket.IO and delivering impactful platforms like
+          lost-and-found systems and smart leave managers. Always pushing
+          boundaries — one line of code at a time.
         </PageHeaderDescription>
-        <PageActions>
+
+        <PageActions className="mt-4 flex flex-wrap gap-3">
           <Button asChild size="sm" className="rounded-md">
             <Link href={siteConfig.links.resume} target="_blank">
               Get Resume
@@ -37,7 +43,9 @@ const IntroductionPage = async () => {
         </PageActions>
       </PageHeader>
 
-      <CodeSnippet title="welcome.ts" code={code.welcome} />
+      <div className="px-4 sm:px-6 md:px-8">
+        <CodeSnippet title="welcome.ts" code={code.welcome} />
+      </div>
 
       <Pager
         prevHref="/"
