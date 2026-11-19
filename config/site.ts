@@ -10,7 +10,7 @@ export const siteConfig = {
     github: "https://github.com/omkarkhot0500",
     githubProfile: "https://github.com/omkarkhot0500",
     resume: "https://drive.google.com/file/d/1968bZ5WmXvrEy8x3R0dbn4NaZLc0WnFX/view?usp=sharing",
-    email: "mailto:omkarkhotforjob001@gmail.com",
+    email: "mailto:omkarkhot0500@gmail.com",
     githubUsername: "omkarkhot0500",
   },
   bitinfonepal: "https://bitinfonepal.com",
